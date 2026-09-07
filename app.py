@@ -47,3 +47,18 @@ col4.metric("High Severity", high_severity)
 st.subheader("Recent Patient Data")
 
 st.dataframe(df.head(10), use_container_width=True)
+# Heart Rate Chart
+
+st.subheader("Heart Rate Monitoring")
+
+st.line_chart(
+    df.set_index("time_sec")[["heart_rate", "HR_baseline"]]
+)
+
+# SpO2 Chart
+
+st.subheader("SpO₂ Monitoring")
+
+st.line_chart(
+    df.set_index("time_sec")[["spo2", "SpO2_baseline"]]
+)
