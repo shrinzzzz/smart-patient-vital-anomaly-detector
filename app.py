@@ -85,3 +85,14 @@ st.dataframe(
     ].head(50),
     use_container_width=True
 )
+# Severity Distribution
+
+st.subheader("Anomaly Severity Distribution")
+
+severity_counts = (
+    df["Severity"]
+    .value_counts()
+    .reindex(["Normal", "Moderate", "High"], fill_value=0)
+)
+
+st.bar_chart(severity_counts)
