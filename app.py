@@ -149,3 +149,23 @@ st.dataframe(
     ].head(100),
     use_container_width=True
 )
+# About the Project
+
+st.sidebar.markdown("---")
+
+st.sidebar.subheader("About This Project")
+
+st.sidebar.write(
+    "This educational biomedical AI prototype analyzes "
+    "patient vital-sign time-series data and detects "
+    "unusual deviations from a patient-specific baseline."
+)
+
+st.sidebar.write(
+    "Signals used: Heart Rate and SpO₂."
+)
+
+st.sidebar.warning(
+    "This prototype is for educational and research purposes "
+    "and is not intended for clinical diagnosis or decision-making."
+)
