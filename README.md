@@ -1,6 +1,6 @@
-# 🫀 Smart Patient Vital-Sign Anomaly Detector
+# Smart Patient Vital-Sign Anomaly Detector
 
-## 📌 Overview
+##  Overview
 
 A biomedical AI prototype that analyzes patient vital-sign time-series data and detects unusual deviations from a patient-specific baseline.
 
@@ -10,7 +10,7 @@ The project uses real-world perioperative physiological data from the VitalDB Op
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Analyze real-world physiological time-series data.
 - Handle missing and irregular biomedical measurements.
@@ -21,7 +21,7 @@ The project uses real-world perioperative physiological data from the VitalDB Op
 
 ---
 
-## 🗃️ Dataset
+## Dataset
 
 The project uses the **VitalDB Open Dataset**, which contains physiological and clinical data collected during surgical procedures.
 
@@ -36,7 +36,7 @@ The main development case used in this project is **Case 2168**.
 
 ---
 
-## 🧠 Methodology
+## Methodology
 
 ```text
 VitalDB Dataset
