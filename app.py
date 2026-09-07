@@ -117,3 +117,35 @@ st.subheader("Anomaly Score Over Time")
 st.line_chart(
     df.set_index("time_sec")[["anomaly_score"]]
 )
+# Severity Filter
+
+st.subheader("Filter by Severity")
+
+severity_options = ["All", "Normal", "Moderate", "High"]
+
+selected_severity = st.selectbox(
+    "Select severity level",
+    severity_options
+)
+
+if selected_severity == "All":
+    filtered_data = df
+else:
+    filtered_data = df[df["Severity"] == selected_severity]
+
+st.write(
+    f"Showing {len(filtered_data)} observations."
+)
+
+st.dataframe(
+    filtered_data[
+        [
+            "time_sec",
+            "heart_rate",
+            "spo2",
+            "anomaly_score",
+            "Severity"
+        ]
+    ].head(100),
+    use_container_width=True
+)
