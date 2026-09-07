@@ -10,6 +10,20 @@ st.set_page_config(
 
 # Title
 st.title("🫀 Smart Patient Vital-Sign Anomaly Detector")
+# Patient Case Selection
+
+st.sidebar.header("Patient Case")
+
+case_options = [2168]
+
+selected_case = st.sidebar.selectbox(
+    "Select Case ID",
+    case_options
+)
+
+st.sidebar.info(
+    f"Currently displaying processed data for Case {selected_case}."
+)
 
 st.write(
     "An educational biomedical AI prototype for detecting "
