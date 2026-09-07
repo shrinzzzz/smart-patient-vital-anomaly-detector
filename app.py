@@ -62,3 +62,26 @@ st.subheader("SpO₂ Monitoring")
 st.line_chart(
     df.set_index("time_sec")[["spo2", "SpO2_baseline"]]
 )
+# Detected Anomalies
+
+st.subheader("Detected Anomalies")
+
+anomaly_data = df[df["Anomaly"] == True].copy()
+
+st.write(
+    f"Detected {len(anomaly_data)} unusual observations "
+    "based on the algorithmic anomaly threshold."
+)
+
+st.dataframe(
+    anomaly_data[
+        [
+            "time_sec",
+            "heart_rate",
+            "spo2",
+            "anomaly_score",
+            "Severity"
+        ]
+    ].head(50),
+    use_container_width=True
+)
