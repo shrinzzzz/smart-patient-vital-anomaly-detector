@@ -110,3 +110,10 @@ severity_counts = (
 )
 
 st.bar_chart(severity_counts)
+# Anomaly Score
+
+st.subheader("Anomaly Score Over Time")
+
+st.line_chart(
+    df.set_index("time_sec")[["anomaly_score"]]
+)
